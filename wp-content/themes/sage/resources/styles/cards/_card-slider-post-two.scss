@@ -1,0 +1,21 @@
+.card-slider-post-two {
+
+    h2 {
+        font-weight: $font-weight-normal;
+    }
+
+    .thumbnail-img {
+        max-width: rem(60px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(70px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(77px);
+        }
+    }
+    
+    p {
+        font-weight: $font-weight-light;
+    }
+
+}

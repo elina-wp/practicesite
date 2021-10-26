@@ -1,0 +1,79 @@
+@import '../common-imports';
+
+.quote-01 {
+    padding: rem(92px 0 50px) !important;
+    @include media-breakpoint-up(md) {
+        padding: rem(65px 0 70px) !important;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: rem(150px 0) !important;
+    }
+    .card-quote {
+        @include media-breakpoint-up(md) {
+            padding-left: rem(30px);
+        }
+        @include media-breakpoint-up(xl) {
+            padding-left: rem(0px);
+        }
+    }
+    @include media-breakpoint-between(md, lg) {
+        .col-md-7 {
+            width: 72%;
+        }
+    }
+    &__thumb {
+        top: rem(-40px);
+        max-width: rem(120px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(202px);
+            top: rem(30px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(243px);
+            top: rem(180px);
+        }
+    }
+}
+
+
+
+.leadspace-people {
+
+    .bodymoving {
+        right: auto;
+        left: rem(-60px);
+        top: rem(200px);
+        bottom: auto;
+        @include media-breakpoint-up(md) {
+            width: rem(230px);
+            top: auto;
+            bottom: rem(-70px);
+            left: rem(-40px);
+            z-index: 1;
+        }
+        @include media-breakpoint-up(xl) {
+            left: rem(-60px);
+            width: rem(300px);
+            bottom: rem(-100px);
+        }
+
+        @media screen and (min-width: 1700px) {
+            width: rem(360px);
+        }
+
+    }
+
+}
+
+
+.full-with-image {
+
+    &__thumb {
+        img {
+            @media (max-width: 500px) {
+                object-position: 100px;
+            }
+        }
+    }
+
+}

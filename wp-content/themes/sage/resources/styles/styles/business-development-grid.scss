@@ -1,0 +1,53 @@
+@import '../common-imports';
+
+.section-business-development {
+
+    .quote-1 {
+        font-size: rem(26px);
+        @include media-breakpoint-up(xl) {
+            font-size: rem(36px);
+        }
+    }
+    
+    .link-2 {
+        font-size: rem(20px);
+        line-height: rem(22px);
+
+        @include media-breakpoint-up(xl) {
+            font-size: rem(22px);
+            line-height: rem(28px);
+        }
+
+    }
+
+    &__article {
+        > div {
+            @include media-breakpoint-down(md) {
+                flex-direction: column-reverse;
+    
+                & > div {
+                    text-align: center;
+                }
+            }
+        }
+        &:last-child {
+            @include media-breakpoint-up(md) {
+                margin-bottom: rem(0px) !important;
+            }
+        }
+        .text-info {
+            font-weight: 500;
+            color: $secondary !important;
+        }
+    }
+
+
+    &__figure {
+        max-width: rem(150px);
+
+        @include media-breakpoint-up(xl) {
+            max-width: rem(196px);
+        }
+    }
+
+}

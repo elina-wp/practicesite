@@ -1,0 +1,25 @@
+@import '../common-imports';
+
+.call-to-action-01 {
+    &__card {
+        margin: rem(0 -7px);
+        @include media-breakpoint-up(md) {
+            margin: rem(0px);
+        }
+    }
+
+    h2 {
+        font-size: rem(26px);
+        line-height: rem(27px);
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(28px);
+            line-height: normal;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: rem(40px);
+            line-height: rem(42px);
+        }
+    }
+}

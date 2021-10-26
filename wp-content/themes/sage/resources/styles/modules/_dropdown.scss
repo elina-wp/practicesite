@@ -1,0 +1,57 @@
+.dropdown-selector {
+    .nice-select {
+        width: 100%;
+        height: rem(40px);
+        border-radius: rem(8px);
+        font-size: rem(20px);
+        line-height: rem(18px);
+        display: flex;
+        align-items: center;
+        border-color: $gray-600;
+
+        > span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .list {
+            width: 100%;
+            li {
+                padding: rem(10px 18px);
+                white-space: normal;
+                font-size: rem(18px);
+            }
+        }
+
+        .option.focus, 
+        .option.selected.focus, 
+        .option:hover {
+            background: $off-white;
+        }
+
+
+        .option {
+            &.selected {
+                font-weight: normal;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "\e907";
+            font-family: 'landmark';
+            border: none;
+            top: rem(11px);
+            right: rem(25px);
+            transform: none;
+            font-size: rem(16px);
+            color: $secondary;
+        }
+
+    }
+
+    h5 {
+        font-size: rem(14px);
+        font-weight: 500;
+    }
+}

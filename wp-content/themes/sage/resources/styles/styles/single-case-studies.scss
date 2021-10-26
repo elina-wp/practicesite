@@ -1,0 +1,124 @@
+@import '../common-imports';
+@import '../cards/card-icon-grid';
+
+
+.single-case-studies {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin: rem(0 0 25px);
+        @include media-breakpoint-up(xl) {
+            margin: rem(0 0 35px); 
+        }
+    }
+
+    h5 {
+        text-transform: uppercase;
+        margin: rem(0 0 10px);
+        font-size: rem(14px);
+        line-height: rem(16px);
+        font-weight: 500;
+        @include media-breakpoint-up(xl) {
+            margin: rem(0 0 5px);
+            font-size: rem(20px);
+            line-height: normal;
+        }
+    }
+
+    blockquote {
+        margin: rem(0 0 15px);
+        font-size: rem(28px);
+        line-height: rem(32px);
+        font-weight: $font-weight-light;
+        padding-top: rem(20px);
+        @include media-breakpoint-up(xl) {
+            font-size: rem(36px);
+            line-height: rem(40px);
+            padding-top: rem(25px);
+        }
+
+        p {
+            margin: rem(0px);
+            padding: rem(0px);
+        }
+
+    }
+
+    p {
+        margin: rem(0 0 25px);
+        @include media-breakpoint-up(xl) {
+            margin: rem(0 0 35px);
+        }
+    }
+
+    .text-small {
+        font-size: rem(16px);
+        line-height: rem(18px);
+        font-weight: 500;
+    }
+
+}
+
+.two-two-thumbnail-block {
+    margin: rem(0 -8px);
+
+    .thumbnail-img {
+        padding: rem(0 8px);
+        margin-bottom: rem(10px);
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            margin: rem(0 0 16px);
+        }
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            margin: rem(0 0 16px);
+        }
+
+        img {
+            @include media-breakpoint-up(md) {
+                height: 230px;
+                object-fit: cover;
+            }
+        }
+    }
+
+}
+
+.post-sidebar {
+    .card-icon-grid {
+        margin: rem(0 0 45px);
+        @include media-breakpoint-up(xl) {
+            margin: rem(0 0 80px);
+        }
+        &:last-child {
+            margin: rem(0px);
+        }
+        h3 {
+            font-size: rem(32px);
+            line-height: rem(23px);
+            @include media-breakpoint-up(xl) {
+                font-size: rem(40px);
+                line-height: rem(28px);
+            }
+        }
+    }
+}
+
+
+
+.call-to-action-02 {
+    margin-top: rem(35px);
+    margin-bottom: rem(35px);
+    padding-bottom: rem(0px) !important;
+    @include media-breakpoint-up(md) {
+        margin-top: rem(55px);
+        margin-bottom: rem(50px);
+    }
+}
+
+
+.link-contact {
+    p & {
+        margin: 0px;
+    }
+}

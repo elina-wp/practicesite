@@ -1,0 +1,86 @@
+@import '../../node_modules/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+@import './variables';
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/utilities';
+@import 'mixins/mixins';
+@import 'base/global-vars';
+@import 'global/path';
+@import 'global/fonts';
+@import 'vendors/icons/variables/variables';
+@import 'vendors/icons/icons.scss';
+
+// 4. Include any optional Bootstrap components as you like
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/dropdown';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/button-group';
+@import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/accordion';
+@import '../../node_modules/bootstrap/scss/tables';
+@import '../../node_modules/jquery-nice-select/scss/nice-select';
+@import '../../node_modules/bootstrap/scss/pagination';
+
+
+
+@import 'utilities/typo';
+@import 'utilities/helper';
+
+// Helpers
+@import '../../node_modules/bootstrap/scss/helpers';
+
+@import '../../node_modules/bootstrap/scss/utilities/api';
+
+// import swiper bundle css
+@import '../../node_modules/swiper/swiper-bundle.min';
+
+// Utilities
+// $utilities: (
+//     "font-weight": (
+//         property: font-weight,
+//         class: fw,
+//         values: (
+//           light: $font-weight-light,
+//           lighter: $font-weight-lighter,
+//           medium:  $font-weight-medium,
+//           normal: $font-weight-normal,
+//           bold: $font-weight-bold,
+//           bolder: $font-weight-bolder
+//         )
+//       )
+//  );
+
+// Import Modules
+@import 'modules/buttons';
+@import 'modules/links';
+@import 'modules/forms';
+@import 'modules/thumbnail';
+@import 'modules/swiper';
+@import 'modules/accordion';
+@import 'modules/filternav';
+@import 'modules/dropdown';
+@import 'modules/pagination';
+@import 'modules/masonry';
+
+//5. Global Components to use
+@import 'layout/containers';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/post';
+
+// Import Cards Modules
+@import 'cards/post-card';
+@import 'cards/single-card-with-bg';
+@import 'cards/card-interactive';

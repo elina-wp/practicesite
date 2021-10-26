@@ -1,0 +1,20 @@
+.card-case-studies {
+
+    > a {
+        border: 1px solid $gray-600;
+        padding: rem(60px 10px 25px);
+        @include media-breakpoint-up(md) {
+            padding: rem(70px 10px 30px);
+        }
+        &:hover {
+            border-color: $white;
+        }
+    }
+
+    p {
+        font-size: rem(14px);
+        line-height: rem(20px);
+        font-weight: 500;
+    }
+
+}

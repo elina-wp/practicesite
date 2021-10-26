@@ -1,0 +1,235 @@
+@import '../common-imports';
+
+.contact-popup {
+    z-index: 1111;
+    overflow-y: auto;
+    left: rem(0px);
+    bottom: rem(0px);
+    transform: translateY(100%);
+    transition: all 0.4s ease-in-out;
+
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        background-color: #f7f7f7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondary;
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+
+    .z-index-2 {
+        z-index: 2;
+    }
+
+    .close-contact {
+        font-size: rem(46px);
+        @include media-breakpoint-up(md) {
+            font-size: rem(51px);
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: rem(60px);
+        }
+    }
+
+    &__header {
+        @include media-breakpoint-only(md) {
+            margin-top: rem(-15px);
+        }
+    }
+
+    .bodymoving {
+        max-width: 100%;
+        position: absolute;
+        top: rem(-90px);
+        right: 9%;
+        transform: rotate(270deg);
+        width: rem(220px);
+        @include media-breakpoint-up(md) {
+            top: rem(-97px);
+            right: 25%;
+            width: rem(280px);
+        }
+        @include media-breakpoint-up(xl) {
+            top: rem(-160px);
+            width: rem(500px);
+        }
+    }
+
+    &__formwrapper {
+        .custom-select {
+            border-bottom: 1px solid $gray-600;
+
+            .wpcf7-form-control-wrap {
+                position: static;
+            }
+
+            .nice-select {
+
+                &.open {
+                    .list {
+                        top: rem(55px);
+                        @include media-breakpoint-up(md) {
+                            top: rem(75px);
+                        }
+                    }
+                }
+
+                .list {
+                    padding: rem(17px 7px);
+                    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+                    border-radius: rem(10px);
+                    background: $white;
+                    min-width: 100%;
+                    top: rem(65px);
+                    transition: all 0.3s ease-in-out;
+                    z-index: 99;
+                    @include media-breakpoint-up(md) {
+                        min-width: rem(345px);
+                        top: rem(85px);
+                    }
+                    li {
+                        font-size: rem(18px);
+                        line-height: rem(44px);
+                        border-radius: rem(8px);
+                        background: none;
+                        &:hover {
+                            background: $light;
+                        }
+                    }
+                    .option {
+                        &.selected {
+                            font-weight: normal;
+                            background: $light;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-submit {
+            font-size: rem(30px);
+            line-height: 1.2;
+            border: none;
+            border-bottom: 2px solid $primary;
+            border-radius: rem(0px);
+            padding: rem(0px);
+            @include media-breakpoint-up(md) {
+                font-size: rem(34px);
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: rem(50px);
+                line-height: 1;
+            }
+            &:hover {
+                color: $secondary;
+                border-color: $secondary;
+            }
+        }
+
+        .is-textarea {
+            height: rem(200px);
+            resize: none;
+            @include media-breakpoint-up(md) {
+                height: rem(425px);
+            }
+        }
+
+        .info-spanner {
+            color: $primary;
+        }
+    }
+
+    &__footer {
+        hr {
+            border-top: 1px solid $gray-600 !important;
+            opacity: 1;
+        }
+
+        .contact-email {
+            padding-bottom: rem(25px);
+            @include media-breakpoint-up(md) {
+                padding-bottom: rem(0px);
+            }
+            a {
+                font-size: rem(22px);
+                line-height: rem(23px);
+                font-weight: $font-weight-light;
+                @include media-breakpoint-up(xl) {
+                    font-size: rem(30px);
+                }
+            }
+        }
+
+        .contact-address {
+            @include media-breakpoint-down(sm) {
+                padding-right: rem(30px);
+            }
+            h5 {
+                margin-bottom: rem(5px);
+                font-weight: 500;
+                line-height: normal;
+                font-size: rem(16px);
+                text-transform: uppercase;
+            }
+            p {
+                margin-bottom: rem(0px);
+                font-size: rem(16px);
+                line-height: rem(18px);
+            }
+        }
+    }
+
+    &__success {
+        p {
+            padding-left: rem(35px);
+            i {
+                position: absolute;
+                left: rem(0px);
+                top: rem(2px);
+            }
+        }
+    }
+
+    .inquiry-dropdown {
+        position: absolute;
+        top: rem(65px);
+        left: rem(0px);
+        width: rem(260px);
+        background: $white;
+        border-radius: rem(10px);
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+        padding: rem(17px 7px);
+        opacity: 0;
+        visibility: hidden;
+        @include media-breakpoint-up(md) {
+            width: rem(345px);
+            top: rem(80px);
+        }
+        ul {
+            li {
+                a {
+                    display: block;
+                    font-size: rem(18px);
+                    line-height: rem(44px);
+                    border-radius: rem(8px);
+                    padding: rem(0 12px);
+                    &:hover {
+                        background: $light;
+                    }
+                }
+            }
+        }
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

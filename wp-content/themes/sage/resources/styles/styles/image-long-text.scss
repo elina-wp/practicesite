@@ -1,0 +1,35 @@
+@import '../common-imports';
+
+.image-long-text {
+    .single-card-with-bg {
+        @include media-breakpoint-between(md, lg) {
+            margin-left: rem(-10px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-left: rem(60px);
+        }
+
+        &__thumb {
+            margin-bottom: rem(45px);
+            margin-right: rem(15px);
+            @include media-breakpoint-up(md) {
+                margin-bottom: rem(0px);
+                margin-right: rem(0px);
+            }
+
+            &::after {
+                left: auto;
+                right: rem(-15px);
+                bottom: rem(-15px);
+                height: 100%;
+                @include media-breakpoint-up(xl) {
+                    right: auto;
+                    left: rem(-20px);
+                    bottom: rem(-20px);
+                    height: rem(243px);
+                }
+            }
+        }
+    }
+}

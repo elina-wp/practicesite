@@ -1,0 +1,212 @@
+.#{$global} {
+    &-footer {
+        color: $primary;
+        .footer {
+            &-top {
+                .thumbnail-img {
+                    div {
+                        max-width: rem(74px);
+                        @include media-breakpoint-up(xl) {
+                            max-width: rem(120px);
+                        }
+                        > a {
+                            max-width: rem(46px);
+                            @include media-breakpoint-up(xl) {
+                                max-width: rem(60px);
+                            }
+                        }
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 0;
+                        width: 100%;
+                        height: rem(1px);
+                        @extend .bg-gray;
+                        transform: translateY(-50%);
+                    }
+                }
+                p {
+                    font-size: rem(18px);
+                    letter-spacing: rem(0.32px);
+                    @include media-breakpoint-up(md) {
+                        font-size: rem(20px);
+                        letter-spacing: rem(0.36px);
+                    }
+                }
+            }
+            &-bottom {
+                ul {
+                    li {
+                        line-height: rem(0px);
+                        &:not(:last-child) {
+                            a {
+                                border-right: 1px solid $secondary;
+                                padding-right: rem(5px);
+                                margin-right: rem(5px);
+                            }
+                        }
+                        a {
+                            font-size: rem(12px);
+                            line-height: rem(10px);
+                            letter-spacing: rem(0.43px);
+                            color: $secondary;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            @include media-breakpoint-up(xl) {
+                                font-size: rem(14px);
+                                letter-spacing: rem(0.5px);
+                            }
+                        }
+                        &:hover {
+                            a {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+                p {
+                    font-size: rem(14px);
+                    margin: rem(0 -2px);
+                    @include media-breakpoint-up(md) {
+                        letter-spacing: rem(0.25px);
+                        margin: rem(0px);
+                    }
+                }
+            }
+        }
+        .footer-block {
+            ul {
+                li {
+                    a {
+                        font-size: rem(16px);
+                        line-height: rem(34px);
+                        display: block;
+                        letter-spacing: rem(0.5px);
+                        color: $primary;
+                    }
+                    &:hover {
+                        a {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+
+            .subscribe {
+                .wpcf7-response-output {
+                    font-size: rem(16px);
+                }
+            }
+
+        }
+    }
+}
+
+.social {
+    ul {
+        li {
+            &.social {
+                a {
+                    padding-left: rem(25px);
+                    font-size: rem(16px);
+                    line-height: rem(34px);
+                    letter-spacing: rem(0.5px);
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        left: rem(0px);
+                        top: rem(0px);
+                        font-family: 'landmark';
+                    }
+                    i {
+                        margin-right: rem(8px);
+                        position: relative;
+                    }
+                }
+            }
+            &.twitter {
+                a {
+                    &::before {
+                        content: '\e918';
+                    }
+                }
+            }
+            &.facebook {
+                a {
+                    &::before {
+                        content: '\e90a';
+                    }
+                }
+            }
+            &.linkedin {
+                a {
+                    &::before {
+                        content: '\e910';
+                    }
+                }
+            }
+            &.vimeo {
+                a {
+                    &::before {
+                        content: '\e91a';
+                    }
+                }
+            }
+            &.flickr {
+                a {
+                    &::before {
+                        content: '\e90b';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.subscribe {
+    h6 {
+        margin-bottom: rem(2px);
+        font-size: rem(16px);
+        line-height: rem(16px);
+        letter-spacing: rem(0.5px);
+        color: $primary;
+    }
+    p {
+        font-size: rem(14px);
+        line-height: rem(16px);
+        letter-spacing: rem(0.25px);
+        margin-bottom: rem(5px);
+        @extend .fw-light;
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(15px);
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: rem(20px);
+        }
+    }
+    .form-control {
+        border: 1px solid #a7a7b3;
+        height: 30px;
+        font-size: 14px;
+        letter-spacing: 0.25px;
+        border-radius: 8px;
+        padding: rem(8px 18px);
+        margin-bottom: rem(10px);
+    }
+    .btn-primary {
+        min-width: 100%;
+        font-size: rem(14px);
+        font-weight: 500;
+        border-radius: rem(7.5px);
+        padding: rem(4px 16px);
+        @include media-breakpoint-up(sm) {
+            min-width: rem(100px);
+            font-size: rem(15px);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@import '../common-imports';
+
+.blog-article {
+    .container {
+        @include media-breakpoint-up(md) {
+            padding-left: rem(90px);
+            padding-right: rem(90px);
+        }
+        @include media-breakpoint-up(xl) {
+            padding-left: rem(80px);
+            padding-right: rem(80px);
+        }
+    }
+
+    .row {
+        &.inner {
+            @include media-breakpoint-only(md) {
+                margin: rem(0 -25px);
+            }
+            [class*='col-'] {
+                @include media-breakpoint-only(md) {
+                    padding: rem(0 25px);
+                }
+                .post-card {
+                    &__thumb {
+                        background: $secondary;
+                    }
+                }
+
+                &:nth-of-type(2n) {
+                    .post-card {
+                        &__thumb {
+                            background: $tan;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    display: none;
+                    @include media-breakpoint-up(lg) {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .post-card img {
+        @include media-breakpoint-up(md) {
+            height: rem(215px);
+            width: 100%;
+            object-fit: cover;
+        }
+        @include media-breakpoint-up(lg) {
+            height: rem(260px);
+        }
+        @include media-breakpoint-up(xl) {
+            height: rem(330px);
+        }
+    }
+
+}
+
+
+.blog-article .row.inner [class*='col-'] .post-card {
+    margin-bottom: rem(40px);
+    @include media-breakpoint-up(xl) {
+        margin-bottom: rem(70px);
+    }
+}
+
+.blog-article .row.inner [class*='col-']:nth-of-type(2) {
+
+    .post-card {
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(0px);
+        }
+    }
+
+}
+
+.home {
+    .blog-article .row.inner [class*='col-'] .post-card {
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(0px);
+        }
+    }
+}
+

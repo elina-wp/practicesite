@@ -1,0 +1,105 @@
+@import '../common-imports';
+
+.link-case-studies {
+    padding-bottom: rem(60px);
+    @include media-breakpoint-up(md) {
+        padding-bottom: rem(95px);
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem(180px);
+    }
+    &__card {
+        transition: all 0.2s ease-in-out;
+        z-index: 22;
+        > .link-text {
+            font-size: rem(22px);
+            line-height: rem(20px);
+        }
+        position: relative;
+        img {
+            position: relative;
+        }
+        @include media-breakpoint-up(xl) {
+            &::before {
+                position: absolute;
+                content: '';
+                bottom: rem(15px);
+                left: rem(15px);
+                background: $secondary;
+                height: rem(243px);
+                width: calc(100% - 20px);
+                transition: all 0.6s ease-in-out;
+            }
+        }
+        &:hover {
+            @include media-breakpoint-up(xl) {
+                padding-left: rem(15px);
+                padding-bottom: rem(15px);
+            }
+            .link-case-studies__overlay {
+                opacity: 1;
+                visibility: visible;
+            }
+            &::before {
+                left: rem(0px);
+                bottom: rem(0px);
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        @include media-breakpoint-only(md) {
+            height: rem(276px);
+            object-fit: cover;
+        }
+        @include media-breakpoint-only(lg) {
+            height: rem(400px);
+            object-fit: cover;
+        }
+    }
+
+    &__overlay {
+        background: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: rem(0px);
+        left: rem(0px);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: $white;
+        padding: rem(0 40px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+
+        h5 {
+            font-size: rem(22px);
+        }
+
+        .link-text {
+            font-size: rem(26px);
+            line-height: rem(18px);
+        }
+    }
+
+    .row {
+        &.inner {
+            margin: rem(0 -5px);
+            [class*='col-'] {
+                @include media-breakpoint-between(md, lg) {
+                    padding: rem(0 5px);
+                    &:first-child {
+                        width: 40%;
+                    }
+                    &:nth-of-type(2) {
+                        width: 30%;
+                    }
+                    &:nth-of-type(3) {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.filter {
+    &-btn {
+        top: 50%;
+        transform: translateY(-50%);
+        i {
+            font-size: rem(18px);
+        }
+    }
+    &-input {
+        padding: rem(10px 25px 10px 16px);
+        font-size: rem(20px);
+        line-height: rem(18px);
+        color: $primary;
+        border: 1px solid $gray-600;
+        border-radius: rem(8px);
+        &:focus {
+            outline: none;
+        }
+    }
+    &-nav {
+        .filter {
+            &-item {
+                margin-right: rem(10px);
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            &-link {
+                padding: rem(10px 25px);
+                &:focus,
+                &.active,
+                &:hover {
+                    background-color: $secondary;
+                    color: $white;
+                }
+            }
+        }
+    }
+    &-search {
+        .filter-input {
+            padding: rem(8px 25px 8px 16px);
+        }
+    }
+    &-dropdown {
+        .dropdown-item {
+            white-space: normal;
+        }
+        .filter-input {
+            cursor: pointer;
+        }
+        .dropdown-toggle {
+            &::after {
+                content: '\e907';
+                right: 0;
+                padding: rem(0 7px);
+                font-size: rem(18px);
+                color: $secondary;
+                border: 0;
+                background: none;
+                width: auto;
+                height: auto;
+                font-family: 'landmark';
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(calc(-50% - 2px));
+            }
+        }
+    }
+}

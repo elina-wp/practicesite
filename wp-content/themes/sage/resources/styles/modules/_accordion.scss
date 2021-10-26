@@ -1,0 +1,95 @@
+.custom-accordion {
+    .accordion-item {
+        margin-bottom: rem(25px);
+        border-bottom: none;
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(30px);
+        }
+        background: none;
+        &:last-child {
+            margin-bottom: rem(0px);
+        }
+    }
+
+    .accordion-button {
+        background: none;
+        border: none;
+        padding: rem(0px);
+        font-size: rem(26px);
+        line-height: 1;
+        @extend .transition-fast;
+        font-weight: 500;
+
+        @include media-breakpoint-up(xl) {
+            font-size: rem(36px);
+        }
+
+        color: $tan;
+        &::after {
+            display: none;
+        }
+        &.collapsed {
+            color: $white;
+            font-weight: 400;
+            span {
+                &::before {
+                    content: '\e901';
+                }
+            }
+        }
+        span {
+            position: relative;
+            margin-top: rem(4px);
+            font-size: rem(22px);
+            &::before {
+                position: absolute;
+                content: '\e912';
+                left: rem(0px);
+                top: rem(-11px);
+                font-family: 'landmark';
+            }
+        }
+
+        &:not(.collapsed) {
+            box-shadow: none;
+        }
+    }
+
+    .accordion-body {
+        color: $white;
+        padding: rem(5px 0 0);
+        @include media-breakpoint-up(md) {
+            padding: rem(10px 0 0);
+        }
+        p {
+            margin-bottom: rem(0px);
+        }
+    }
+
+    &--dark {
+        .accordion-button span {
+            color: $light-blue;
+        }
+    }
+
+    // &--dark {
+    //     .accordion-button {
+    //         color: $tan;
+    //         &.collapsed {
+    //             color: $white;
+    //         }
+    //     }
+    // }
+}
+
+.collapse {
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    @include transition($transition-collapse);
+}

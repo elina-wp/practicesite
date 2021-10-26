@@ -1,0 +1,90 @@
+@import '../common-imports';
+
+.leadspace-expertise {
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(225px) !important;
+    }
+
+    &__content {
+        p {
+            margin: rem(0 0 25px);
+            @include media-breakpoint-up(md) {
+                margin: rem(0 0 25px);
+            }
+            &:last-child {
+                margin: rem(0px);
+            }
+        }
+    }
+
+    &__thumb {
+        max-width: rem(126px);
+        position: absolute;
+        top: rem(90px);
+        right: rem(0px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(194px);
+            top: rem(165px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(364px);
+            top: rem(225px);
+        }
+    }
+
+    .bodymoving {
+        max-width: 100%;
+        position: absolute;
+        top: rem(80px);
+        right: rem(-90px);
+        width: rem(160px);
+        @include media-breakpoint-up(md) {
+            top: rem(120px);
+            width: rem(330px);
+            right: rem(-100px);
+        }
+        @include media-breakpoint-up(xl) {
+            top: rem(190px);
+            width: rem(480px);
+            right: rem(-70px);
+        }
+
+        &.line {
+            top: rem(40px);
+            right: rem(-80px);
+            width: rem(210px);
+            @include media-breakpoint-up(md) {
+                top: rem(120px);
+                width: rem(330px);
+                right: rem(-100px);
+            }
+            @include media-breakpoint-up(xl) {
+                top: rem(130px);
+                width: rem(520px);
+                right: rem(-160px);
+            }
+        }
+
+    }
+
+    &.img-inside-container {
+        .leadspace-expertise__thumbinside {
+            max-width: rem(166px);
+            margin-bottom: rem(-55px);
+            @include media-breakpoint-up(sm) {
+                max-width: initial;
+                margin-bottom: rem(0px);
+            }
+        }
+
+        .bodymoving {
+            position: static;
+            max-width: 100%;
+            @include media-breakpoint-up(md) {
+            }
+            @include media-breakpoint-up(xl) {
+            }
+        }
+
+    }
+}

@@ -1,0 +1,156 @@
+@import '../common-imports';
+
+
+.single-newsroom {
+
+    padding: rem(95px 0 55px);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    @include media-breakpoint-up(xl) {
+        padding: rem(295px 0 95px);
+    }
+
+    &__content {
+        .image-text-block {
+            &__thumb {
+                @include media-breakpoint-up(md) {
+                    width: 38.6%;
+                    margin-right: rem(34px);
+                }
+                @include media-breakpoint-up(xl) {
+                    width: 39.1%;
+                    margin-right: rem(100px);
+                }
+                @include media-breakpoint-up(xxl) {
+                    margin-right: rem(125px);
+                }
+                .bodymoving {
+                    position: absolute;
+                    bottom: rem(-100px);
+                    right: rem(-100px);
+                    width: rem(176px);
+                    @include media-breakpoint-up(lg) {
+                        width: rem(260px);
+                        bottom: rem(-170px);
+                    }
+                    @include media-breakpoint-up(xl) {
+                        bottom: rem(-310px);
+                        right: rem(-220px);
+                        width: rem(380px);
+                    }
+                    @media screen and (min-width: 1441px) {
+                        display: none !important;
+                    }
+                }
+            }
+            &__content {
+                @include media-breakpoint-up(md) {
+                    width: 56%;
+                }
+                @include media-breakpoint-up(xl) {
+                    width: 48.5%;
+                }
+                p {
+                    margin: rem(0 0 20px);
+                    @include media-breakpoint-up(md) {
+                        margin: rem(0 0 25px);
+                    }
+                    @include media-breakpoint-up(xl) {
+                        margin: rem(0 0 30px);
+                    }
+                    &:last-child {
+                        margin: rem(0px);
+                    }
+                }
+                .link-text {
+                    font-size: rem(20px);
+                    line-height: rem(22px);
+                    margin-top: rem(10px);
+                    @include media-breakpoint-up(md) {
+                        font-size: rem(22px);
+                        line-height: rem(24px);
+                    }
+                    @include media-breakpoint-up(xl) {
+                        font-size: rem(26px);
+                        line-height: rem(28px);
+                        margin-top: rem(35px);
+                    }
+                }
+            }
+        }
+
+        &--alt {
+            .image-text-block {
+                &__thumb {
+                    @include media-breakpoint-up(md) {
+                        margin-right: rem(0px);
+                        margin-left: rem(34px);
+                    }
+                    @include media-breakpoint-up(xl) {
+                        margin-left: rem(100px);
+                    }
+                    @include media-breakpoint-up(xxl) {
+                        margin-left: rem(125px);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .bodymoving {
+        &.outside {
+            position: absolute;
+            bottom: rem(0px);
+            right: rem(0px);
+            @include media-breakpoint-up(md) {
+                max-width: rem(176px);
+                right: rem(-40px);
+                bottom: rem(260px);
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: rem(385px);
+                right: rem(-40px);
+                bottom: rem(260px);
+            }
+            @media screen and (min-width: 1441px) {
+                display: block !important;
+            }
+        }
+    }
+
+}
+
+
+blockquote {
+    margin: rem(45px 0);
+    @include media-breakpoint-up(md) {
+        max-width: 71%;
+    }
+    @include media-breakpoint-up(xl) {
+        max-width: 70%;
+        margin: rem(65px 0);
+    }
+    h4 {
+        font-size: rem(28px);
+        line-height: rem(32px);
+        @include media-breakpoint-up(md) {
+            font-size: rem(24px);
+            line-height: rem(28px);
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: rem(36px);
+            line-height: rem(40px);
+        }
+    }
+}
+
+
+.call-to-action-02 {
+    margin-top: rem(35px);
+    margin-bottom: rem(35px);
+    padding-bottom: rem(0px) !important;
+    @include media-breakpoint-up(md) {
+        margin-top: rem(55px);
+        margin-bottom: rem(50px);
+    }
+}

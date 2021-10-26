@@ -1,0 +1,7 @@
+@import '../common-imports';
+
+.partner-highlight {
+    & + .partner-highlight {
+        padding-top: rem(0px) !important;
+    }
+}

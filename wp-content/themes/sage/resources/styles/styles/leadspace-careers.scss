@@ -1,0 +1,42 @@
+@import '../common-imports';
+
+.leadspace-careers {
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(245px) !important;
+    }
+
+    .bodymoving {
+        max-width: 100%;
+        position: absolute;
+        top: rem(100px);
+        left: rem(-100px);
+        transform: rotate(270deg);
+        width: rem(215px);
+        @include media-breakpoint-up(md) {
+            left: rem(-70px);
+            top: rem(200px);
+        }
+        @include media-breakpoint-up(xl) {
+            top: rem(70px);
+            transform: rotate(270deg);
+            width: rem(530px);
+            left: rem(-270px);
+        }
+
+    }
+
+    &__content {
+        p {
+            margin-bottom: rem(20px);
+            @include media-breakpoint-up(md) {
+                margin-bottom: rem(35px);
+            }
+            @include media-breakpoint-up(xl) {
+                margin-bottom: rem(45px);
+            }
+            &:last-child {
+                margin-bottom: rem(0px);
+            }
+        }
+    }
+}

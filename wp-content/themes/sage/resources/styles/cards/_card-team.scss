@@ -1,0 +1,39 @@
+.card-team {
+    &__par {
+        font-size: rem(22px);
+    }
+    &__hover {
+        &-bg,
+        &-content {
+            opacity: 0;
+            visibility: hidden;
+        }
+        &-bg {
+            mix-blend-mode: multiply;
+            background-image: linear-gradient(to bottom, rgba(0, 46, 61, 0), #002e3d);
+            @include transition(all 0.5s ease);
+        }
+        &-content {
+            @include transition(all 0.3s ease);
+        }
+    }
+    &:hover {
+        .card-team__hover-bg,
+        .card-team__hover-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .thumbnail-img {
+        img {
+            max-height: rem(200px);
+            width: 100%;
+            object-fit: cover;
+            @include media-breakpoint-up(md) {
+                max-height: rem(330px);
+            }
+        }
+    }
+
+}

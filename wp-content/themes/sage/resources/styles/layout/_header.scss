@@ -1,0 +1,429 @@
+.#{$global} {
+
+    &-main {
+        overflow: hidden;
+    }
+
+    &-header {
+        background: $white;
+        padding: rem(20px 0);
+        z-index: 99;
+        @extend .transition-fast;
+        @include media-breakpoint-up(xl) {
+            padding: rem(50px 0 25px);
+        }
+        .container {
+            @include media-breakpoint-up(md) {
+                padding-left: rem(30px);
+                padding-right: rem(30px);
+            }
+            @include media-breakpoint-up(xl) {
+                padding-left: rem(80px);
+                padding-right: rem(80px);
+            }
+        }
+        .site-logo {
+            @include media-breakpoint-up(lg) {
+                margin-left: rem(-7px);
+            }
+            > a {
+                max-width: rem(139px);
+                @include media-breakpoint-up(md) {
+                    max-width: rem(188px);
+                }
+                @include media-breakpoint-up(lg) {
+                    max-width: rem(205px);
+                }
+            }
+        }
+        .site-navigation {
+            > ul {
+                > li {
+                    padding: rem(8px 0);
+                    &:not(:last-child) {
+                        margin-right: rem(30px);
+                    }
+                    > a {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        color: #23144b;
+                        &:hover {
+                            color: $secondary;
+                        }
+                    }
+                    > .sub-menu {
+                        position: absolute;
+                        top: 100%;
+                        left: rem(0px);
+                        z-index: 2;
+                        min-width: rem(310px);
+                        @extend .bg-white;
+                        padding: rem(17px 7px);
+                        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+                        border-radius: rem(10px);
+                        @extend .transition-fast;
+                        transform: translateY(8px);
+                        visibility: hidden;
+                        opacity: 0;
+                        li {
+                            width: 100%;
+                            a {
+                                color: $primary;
+                                padding: rem(0px 18px);
+                                border-radius: rem(8px);
+                                line-height: rem(44px);
+                                &:hover {
+                                    @extend .bg-offWhite;
+                                }
+                            }
+                        }
+                        .sub-menu {
+                            li {
+                                a {
+                                    padding: rem(0px 36px);
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        > .sub-menu {
+                            transform: translateY(0px);
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                &.sub-menu {
+                    li {
+                        &.menu-item-has-children {
+                            a::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                li {
+                    position: relative;
+                    a {
+                        display: block;
+                        font-size: rem(18px);
+                    }
+                    &.menu-item-has-children {
+                        > a {
+                            position: relative;
+                            &::after {
+                                content: '\e901';
+                                font-family: 'landmark';
+                                right: rem(0px);
+                                top: rem(-8px);
+                                margin-left: rem(5px);
+                                font-size: rem(12px);
+                                color: $secondary;
+                                @extend .transition-slow;
+                            }
+                        }
+                        &:hover {
+                            > a {
+                                &::after {
+                                    content: '\e912';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.sticky {
+            padding: rem(8px 0);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+
+            @include media-breakpoint-up(xl) {
+                padding: rem(17px 0);
+            }
+        }
+        &--dark {
+            background: $primary;
+            &.sticky {
+                box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.8);
+            }
+            .site-logo {
+                a {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+            .site-navigation {
+                > ul {
+                    > li {
+                        > a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .navbar-toggle {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+.navbar-toggle {
+    border: none;
+    padding: rem(0px);
+    background: transparent;
+    font-size: rem(19px);
+    @include media-breakpoint-up(lg) {
+        margin-left: rem(-7px);
+    }
+}
+
+.megamenu-popup {
+    position: fixed;
+    top: rem(0px);
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    @extend .bg-primary;
+    z-index: 99;
+    @extend .transition-slow;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+    .wpcf7 form.sent .wpcf7-response-output {
+        line-height: rem(18px);
+        padding: rem(12px 20px);
+        font-size: rem(18px);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f7f7f7;
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+        border-radius: rem(5px);
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #f7f7f7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $secondary;
+    }
+
+    &.active {
+        right: 0;
+    }
+
+    .wrapper {
+        padding-bottom: rem(170px);
+        min-height: 100%;
+        @include media-breakpoint-up(md) {
+            padding-bottom: rem(179px);
+        }
+    }
+
+    .bodymoving {
+        position: absolute;
+        right: rem(-70px);
+        bottom: rem(30px);
+        max-width: 100%;
+        width: rem(320px);
+        @include media-breakpoint-up(md) {
+            width: rem(475px);
+            right: rem(-175px);
+            bottom: rem(-10px);
+        }
+        @include media-breakpoint-up(xl) {
+            right: rem(-110px);
+            width: rem(510px);
+        }
+    }
+
+    .menu-container {
+        &:not(:last-child) {
+            margin-bottom: rem(30px);
+            @include media-breakpoint-up(xl) {
+                margin-bottom: rem(35px);
+            }
+        }
+        h4 {
+            @extend .fw-normal;
+            margin-bottom: rem(0px);
+            > a {
+                color: $light-blue;
+                display: inline-block;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: rem(-6px);
+                    height: rem(4px);
+                    background: $secondary;
+                    width: 0;
+                    @extend .transition-fast;
+                }
+                &:hover {
+                    color: $white;
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        ul {
+            padding-left: rem(35px);
+            margin-top: rem(15px);
+            li {
+                &:not(:last-child) {
+                    margin-bottom: rem(20px);
+                    @include media-breakpoint-up(xl) {
+                        margin-bottom: rem(15px);
+                    }
+                }
+                a {
+                    color: $tan;
+                    font-size: rem(20px);
+                    line-height: rem(20px);
+                    display: inline-block;
+                    position: relative;
+                    @include media-breakpoint-up(xl) {
+                        font-size: rem(22px);
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: rem(-6px);
+                        height: rem(4px);
+                        background: $tan;
+                        width: 0;
+                        @extend .transition-fast;
+                    }
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-primary {
+        &--contact {
+            padding: rem(10px 34px 13px);
+            font-size: rem(21.6px);
+            line-height: normal;
+            color: $white;
+            background: $secondary;
+            border-color: $secondary;
+            min-width: rem(201px);
+            border-radius: rem(12px);
+            &:hover {
+                background: transparent;
+            }
+            @include media-breakpoint-up(md) {
+                font-size: rem(21.6px);
+                line-height: rem(21.6px);
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: rem(24px);
+                line-height: rem(21.6px);
+            }
+        }
+    }
+
+    .heading-social {
+        color: $light-blue;
+    }
+
+    .social {
+
+        .link-contact,
+        .link-mediakit {
+            display: none;
+        }
+
+        ul {
+            li.social {
+                &:not(:last-child) {
+                    margin-bottom: rem(15px);
+                }
+                a {
+                    color: $tan;
+                    font-size: rem(20px);
+                    line-height: rem(20px);
+                    padding-left: rem(30px);
+                    @include media-breakpoint-up(md) {
+                        font-size: rem(22px);
+                    }
+                    i {
+                        color: $light-blue;
+                        margin-right: rem(10px);
+                        @extend .transition-fast;
+                        position: relative;
+                    }
+                    &:hover {
+                        color: $white;
+                        i {
+                            color: $white;
+                        }
+                    }
+                    &::before {
+                        color: $light-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .subscribe {
+        h4 {
+            color: $light-blue;
+            @include media-breakpoint-up(xl) {
+                font-size: rem(30px);
+            }
+        }
+        p {
+            color: $tan;
+            font-size: rem(14px);
+            line-height: rem(16px);
+            letter-spacing: rem(0.25px);
+            margin-bottom: rem(15px);
+            margin-top: rem(5px);
+        }
+        .form-control {
+            background: transparent;
+            border: 1px solid $light-blue;
+            color: $white;
+            &::placeholder {
+                color: $light-blue;
+            }
+        }
+    }
+}
+
+.close-menu {
+    font-size: rem(46px);
+    color: #98d7f0;
+    &:hover {
+        color: #98d7f0;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: rem(60px);
+    }
+}

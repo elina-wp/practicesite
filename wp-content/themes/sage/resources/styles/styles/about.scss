@@ -1,0 +1,108 @@
+@import '../common-imports';
+
+.leadspace-people {
+
+    .bodymoving {
+        position: absolute;
+        left: rem(-27px);
+        top: rem(177px);
+        max-width: 100%;
+        width: rem(94px);
+        @include media-breakpoint-up(md) {
+            top: auto;
+            bottom: rem(28px);
+            left: rem(-45px);
+            width: rem(240px);
+        }
+        @include media-breakpoint-up(xl) {
+            top: auto;
+            bottom: rem(20px);
+            width: rem(250px);
+            left: rem(-40px);
+        }
+    }
+}
+
+
+.leadspace-people {
+    padding-bottom: rem(40px) !important;
+    @include media-breakpoint-up(md) {
+        padding-bottom: rem(70px) !important;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem(150px) !important;
+    }
+}
+
+.section-icon-grid {
+    padding-top: rem(0px) !important;
+}
+
+.landmark-slider {
+    position: relative;
+    padding-top: rem(50px);
+    @include media-breakpoint-up(md) {
+        padding-top: rem(70px);
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(100px);
+    }
+
+    .slider-title {
+        padding-right: rem(20px);
+        @include media-breakpoint-up(md) {
+            padding-right: rem(0px);
+        }
+    }
+
+    &__thumb {
+        max-width: rem(100px);
+        position: absolute;
+        top: rem(-60px);
+        right: rem(0px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(195px);
+            top: rem(-110px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(311px);
+            top: rem(-180px);
+        }
+    }
+}
+
+.blog-article {
+    padding-top: rem(15px) !important;
+    @include media-breakpoint-up(md) {
+        padding-top: rem(0px) !important;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(50px) !important;
+    }
+}
+
+.section-icon-grid {
+
+    .bodymoving {
+        bottom: rem(-90px);
+        right: rem(-110px);
+        @include media-breakpoint-up(md) {
+            bottom: rem(-130px);
+            width: rem(240px);
+            right: rem(-50px);
+        }
+        @include media-breakpoint-up(xl) {
+            width: rem(430px);
+            right: rem(-130px);
+            bottom: rem(-240px);
+        }
+    }
+
+}
+
+
+.landmark-slider .swiper-slide .card-slider-post .card-content {
+    height: auto;
+}
+
+

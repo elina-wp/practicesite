@@ -1,0 +1,54 @@
+@import '../common-imports';
+
+.leadspace-people {
+
+    .bodymoving {
+        @include media-breakpoint-down(md) {
+            width: rem(150px);
+            bottom: rem(300px);
+        }
+        @include media-breakpoint-between(md, lg) {
+            right: rem(-60px);
+        }
+    }
+
+    .row {
+        > [class^='col-'] {
+            &:first-child {
+                @include media-breakpoint-between(md, lg) {
+                    width: 41.66667%;
+                }
+                @include media-breakpoint-up(xl) {
+                    width: 41.66667%;
+                }
+            }
+            &:last-child {
+                @include media-breakpoint-between(md, lg) {
+                    width: 58.33333%;
+                }
+                @include media-breakpoint-up(xl) {
+                    margin-left: rem(0px);
+                }
+            }
+        }
+    }
+
+    .collapse-text,
+    &__button {
+        @include media-breakpoint-between(md, lg) {
+            padding-left: rem(0px) !important;
+        }
+    }
+}
+
+.swiper-container {
+    padding-bottom: rem(50px) !important;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: rem(70px) !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: rem(175px) !important;
+    }
+}

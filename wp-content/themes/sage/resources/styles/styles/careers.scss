@@ -1,0 +1,71 @@
+@import '../common-imports';
+
+.section-icon-grid {
+    padding-top: rem(0px) !important;
+}
+
+.call-to-action-02 {
+    margin-bottom: rem(35px);
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(0px);
+    }
+    &__card {
+        margin-top: rem(-50px);
+    }
+}
+
+.quote-01 {
+    padding-bottom: rem(100px) !important;
+    padding-top: rem(140px);
+
+    @include media-breakpoint-up(md) {
+        padding-top: rem(0px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem(160px) !important;
+    }
+
+    .bodymoving {
+        position: absolute;
+        max-width: 100%;
+        left: rem(-50px);
+        top: rem(-25px);
+        width: rem(145px);
+
+        @include media-breakpoint-up(md) {
+            left: rem(-100px);
+            top: rem(-25px);
+            width: rem(290px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            top: rem(-150px);
+            left: rem(-165px);
+            width: rem(450px);
+        }
+    }
+
+}
+
+.custom-accordion {
+    margin-bottom: rem(30px);
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(0px);
+    }
+}
+
+.call-to-action-03 {
+    padding: rem(35px 0 30px) !important;
+    @include media-breakpoint-up(md) {
+        padding: rem(40px 0) !important;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: rem(55px 0) !important;
+    }
+}
+
+.theme-footer {
+    background-color: $white;
+    z-index: 9;
+}

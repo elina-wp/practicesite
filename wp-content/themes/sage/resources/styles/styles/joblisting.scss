@@ -1,0 +1,160 @@
+@import '../common-imports';
+
+.joblisting {
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+    &.active {
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        position: fixed;
+        top: rem(0px);
+        right: -100%;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s ease;
+        &.active {
+            display: block;
+            right: 0;
+        }
+    }
+
+    &__table {
+        @include media-breakpoint-down(md) {
+            height: 100vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar-track {
+                background-color: #fff;
+            }
+
+            &::-webkit-scrollbar {
+                width: 7px;
+                background-color: #f7f7f7;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $secondary;
+            }
+        }
+        table {
+            @include media-breakpoint-down(md) {
+                width: calc(90% - 10px);
+            }
+            thead {
+                display: none;
+                @include media-breakpoint-up(md) {
+                    display: table-header-group;
+                }
+                tr {
+                    th {
+                        padding: rem(0 0 15px);
+                        text-transform: uppercase;
+                        font-size: rem(14px);
+                        color: #21344b;
+                        border-bottom: 2px solid $primary;
+                    }
+                }
+            }
+            tbody {
+                @include media-breakpoint-down(md) {
+                    border-top: 2px solid $primary;
+                    display: block;
+                    padding: rem(20px 0 0);
+                }
+                tr {
+                    @include media-breakpoint-down(md) {
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom: 1px solid $gray-600;
+                        margin-bottom: rem(20px);
+                        padding-bottom: rem(20px);
+                        &:last-child {
+                            margin-bottom: rem(0px);
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                bottom: rem(0px);
+                                left: rem(0px);
+                                width: 100%;
+                                background-image: linear-gradient(to bottom, rgba(248, 243, 236, 0), $off-white);
+                                height: rem(74px);
+                                display: block;
+                                @include media-breakpoint-up(md) {
+                                    display: none;
+                                }
+                            }
+                            @include media-breakpoint-down(md) {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                    &:hover {
+                        td {
+                            a {
+                                color: $secondary;
+                            }
+                            &:first-child {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    td {
+                        @include media-breakpoint-down(md) {
+                            padding: rem(0px);
+                            border: none;
+                        }
+                        &:first-child {
+                            width: 41%;
+                            @include media-breakpoint-down(md) {
+                                width: 100%;
+                            }
+                            a {
+                                @include media-breakpoint-down(md) {
+                                    font-weight: 400;
+                                    display: block;
+                                    margin: 0 0 10px;
+                                    line-height: rem(23px);
+                                }
+                            }
+                        }
+                        a {
+                            color: $primary;
+                            @include media-breakpoint-down(md) {
+                                font-weight: 300;
+                            }
+                        }
+                        padding: rem(20px 0);
+                        font-size: rem(22px);
+                        transition: all 0.3s ease;
+                        border-color: $gray-600;
+                        @include media-breakpoint-up(md) {
+                            padding: rem(30px 0);
+                            line-height: rem(36px);
+                        }
+                        @include media-breakpoint-up(xl) {
+                            font-size: rem(26px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__close {
+        @include media-breakpoint-down(md) {
+            margin: rem(20px 0 70px);
+        }
+        a {
+            font-weight: 500;
+            color: $primary;
+            border-bottom: 1px solid $primary;
+        }
+    }
+}

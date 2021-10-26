@@ -1,0 +1,21 @@
+.card-instagram {
+    &__icon {
+        height: rem(45px);
+        width: rem(45px);
+        border-radius: 100%;
+        background: $white;
+        font-size: rem(22px);
+        position: absolute;
+        bottom: rem(-22.5px);
+        right: rem(11px);
+        box-shadow: 0 2px 20px 0 rgba(163, 163, 183, 0.26);
+        color: $secondary;
+        @include media-breakpoint-up(md) {
+            height: rem(65px);
+            width: rem(65px);
+            font-size: rem(24px);
+            bottom: rem(-32.5px);
+            right: rem(22px);
+        }
+    }
+}

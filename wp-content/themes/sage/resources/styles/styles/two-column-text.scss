@@ -1,0 +1,153 @@
+@import '../common-imports';
+
+.two-column-text {
+    &__thumb {
+        max-width: rem(120px);
+        margin: rem(-20px auto 35px);
+        position: relative;
+        @include media-breakpoint-up(md) {
+            max-width: rem(202px);
+            margin: rem(-33px auto 40px);
+            left: rem(-20px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(397px);
+            margin: rem(-60px auto 100px);
+        }
+    }
+
+    .bodymoving {
+        position: absolute;
+        left: rem(-40px);
+        top: rem(-150px);
+        width: rem(190px);
+
+        @include media-breakpoint-up(md) {
+            width: rem(230px);
+            top: rem(-120px);
+            left: rem(-90px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            left: rem(-100px);
+            top: rem(-280px);
+            width: rem(400px);
+        }
+
+        &.line {
+            transform: rotate(270deg);
+            @include media-breakpoint-down(md) {
+                width: rem(270px);
+                top: rem(-210px);
+                left: rem(-155px);
+            }
+            @include media-breakpoint-up(md) {
+                width: rem(270px);
+                top: rem(-160px);
+                left: rem(-100px);
+            }
+            @include media-breakpoint-up(xl) {
+                width: rem(470px);
+                top: rem(-330px);
+                left: rem(-160px);
+            }
+        }
+
+    }
+
+    .custom-accordion {
+        .accordion-item {
+            margin-bottom: rem(28px);
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                margin-bottom: rem(0px);
+            }
+            &:first-child {
+                @include media-breakpoint-up(md) {
+                    padding-right: rem(20px);
+                }
+                @include media-breakpoint-up(xl) {
+                    padding-right: rem(50px);
+                    padding-left: rem(46px);
+                }
+            }
+            &:last-child {
+                @include media-breakpoint-up(md) {
+                    padding-left: rem(20px);
+                }
+                @include media-breakpoint-up(xl) {
+                    padding-left: rem(50px);
+                    padding-right: rem(72px);
+                }
+            }
+        }
+
+        .accordion-button {
+            color: $primary;
+            font-size: rem(28px);
+            @media screen and (max-width: 375px) {
+                max-width: rem(190px);
+                align-items: flex-start;
+            }
+            @include media-breakpoint-up(md) {
+                pointer-events: none;
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: rem(44px);
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:not(.collapsed) {
+                color: $gray-600;
+                @include media-breakpoint-up(md) {
+                    color: $primary;
+                }
+            }
+            &.collapsed {
+                color: $primary;
+                font-weight: 500;
+                span::before {
+                    font-size: rem(14px);
+                }
+            }
+            span {
+                margin-top: rem(14px);
+                @media screen and (max-width: 375px) {
+                    margin-top: rem(20px);
+                }
+                &::before {
+                    font-size: rem(14px);
+                    color: $secondary;
+                    @include media-breakpoint-up(md) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .accordion-body {
+            p {
+                color: $primary;
+                @include media-breakpoint-up(md) {
+                    margin: rem(0 0 25px);
+                }
+                @include media-breakpoint-up(xl) {
+                    margin: rem(0 0 35px);
+                }
+            }
+        }
+
+        .link-text {
+            font-size: rem(22px);
+            line-height: rem(23px);
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: rem(26px);
+                line-height: rem(28px);
+            }
+        }
+    }
+}

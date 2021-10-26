@@ -1,0 +1,72 @@
+@import '../common-imports';
+@import '../cards/card-link';
+
+.post-filter {
+    &__controls {
+        i {
+            transform: scale(1);
+            transform-origin: 8px 13px;
+        }
+        a[aria-expanded='true'] {
+            i {
+                transform: scale(-1);
+            }
+        }
+    }
+    &__thumb {
+        position: absolute;
+        right: rem(30px);
+        bottom: rem(-65px);
+        max-width: rem(120px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(192px);
+            bottom: rem(-110px);
+            right: rem(0);
+        }
+        @include media-breakpoint-up(lg) {
+            bottom: rem(-120px);
+            max-width: rem(407px);
+            right: rem(80px);
+        }
+    }
+
+    &-newsroom {
+        &__thumb {
+            width: 100%;
+            max-width: rem(600px);
+            right: rem(-280px);
+            bottom: rem(-60px);
+            @include media-breakpoint-up(md) {
+                max-width: rem(500px);
+                right: rem(-300px);
+                bottom: rem(-60px);
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: rem(600px);
+                right: rem(-280px);
+                bottom: rem(-90px);
+            }
+            @include media-breakpoint-up(xl) {
+                bottom: rem(-120px);
+            }
+        }
+    }
+
+    .card-link {
+        img {
+            width: 100%;
+            object-fit: cover;
+            @include media-breakpoint-up(md) {
+                height: rem(215px);
+            }
+            @include media-breakpoint-up(lg) {
+                height: rem(260px);
+            }
+            @include media-breakpoint-up(xl) {
+                height: rem(330px);
+            }
+        }
+    }
+
+
+}
