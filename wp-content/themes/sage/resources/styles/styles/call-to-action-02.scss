@@ -1,0 +1,30 @@
+@import '../common-imports';
+
+.call-to-action-02 {
+    &__card {
+        box-shadow: 0 2px 18px 0 rgba(163, 163, 183, 0.26);
+        border-radius: rem(19px);
+
+        &__title {
+            color: #21344b;
+            p{
+                margin-bottom: 0;
+            }
+        }
+
+        .btn-secondary {
+            padding: rem(12px 36px);
+            font-size: rem(18px);
+            line-height: rem(18px);
+            @include media-breakpoint-up(md) {
+                font-size: rem(20px);
+                line-height: rem(18px);
+                padding: rem(12px 27px);
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: rem(24px);
+                line-height: rem(21.6px);
+            }
+        }
+    }
+}

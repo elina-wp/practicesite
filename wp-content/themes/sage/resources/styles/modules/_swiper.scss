@@ -1,0 +1,43 @@
+// pagination
+
+.swiper-pagination-bullet {
+    width: rem(10px);
+    height: rem(10px);
+    background-color: $off-white;
+    margin: rem(0, 5px);
+    opacity: 1;
+    &-active {
+        background-color: $secondary;
+    }
+}
+
+// arrows
+
+.swiper-button {
+    &-prev,
+    &-next {
+        &::after {
+            font-size: rem(31px);
+            color: $secondary;
+        }
+    }
+    &-disabled {
+        display: none;
+    }
+
+    &-prev {
+        transform: rotate(180deg);
+        &::after {
+            font-family: 'landmark';
+            content: "\e920";
+        }
+    }
+
+    &-next {
+        &::after {
+            font-family: 'landmark';
+            content: "\e920";
+        }
+    }
+
+}

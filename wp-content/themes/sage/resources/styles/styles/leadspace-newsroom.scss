@@ -1,0 +1,27 @@
+@import '../common-imports';
+
+.leadspace-newsroom {
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(245px) !important;
+    }
+
+    .bodymoving {
+        width: rem(135px);
+        position: absolute;
+        bottom: rem(15px);
+        left: rem(-40px);
+        @include media-breakpoint-up(md) {
+            position: static;
+            width: rem(230px);
+            margin-top: rem(-15px);
+        }
+        @include media-breakpoint-up(xl) {
+            width: rem(379px);
+            margin-top: rem(-40px);
+        }
+    }
+
+    .btn-primary {
+        z-index: 1;
+    }
+}

@@ -1,0 +1,135 @@
+@import '../common-imports';
+
+.quote {
+    &-01 {
+        .card-quote {
+            margin-bottom: rem(30px);
+            @include media-breakpoint-up(md) {
+                margin-bottom: rem(35px);
+            }
+            @include media-breakpoint-up(xl) {
+                margin-bottom: rem(85px);
+            }
+            &:last-child {
+                margin-bottom: rem(0px);
+            }
+            h4 {
+                font-size: rem(24px);
+                line-height: rem(28px);
+                @include media-breakpoint-up(xl) {
+                    font-size: rem(32px);
+                    line-height: rem(36px);
+                }
+            }
+        }
+        &__thumb {
+            max-width: rem(93px);
+            position: absolute;
+            left: rem(0px);
+            top: rem(-25px);
+            @include media-breakpoint-up(md) {
+                max-width: rem(188px);
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: rem(285px);
+                top: rem(-148px);
+            }
+        }
+        .bodymoving {
+            position: absolute;
+            left: rem(-13px);
+            top: rem(-47px);
+            max-width: 100%;
+            width: rem(140px);
+            @include media-breakpoint-up(md) {
+                left: rem(-28px);
+                top: rem(18px);
+                width: rem(240px);
+            }
+            @include media-breakpoint-up(xl) {
+                top: rem(165px);
+                left: rem(-32px);
+                width: rem(290px);
+            }
+        }
+    }
+    &-02 {
+        &__card {
+            .inner {
+                z-index: 1;
+                padding: rem(24px 28px);
+                @include media-breakpoint-up(md) {
+                    padding: rem(50px 50px);
+                }
+                @include media-breakpoint-up(xl) {
+                    padding: rem(55px 60px 70px 75px);
+                }
+            }
+            h3 {
+                font-size: rem(24px);
+                line-height: rem(28px);
+                @include media-breakpoint-up(xl) {
+                    font-size: rem(32px);
+                    line-height: rem(36px);
+                }
+            }
+            &.card-shape {
+                @include media-breakpoint-up(md) {
+                    padding-left: rem(15px);
+                    padding-bottom: rem(15px);
+                }
+                @include media-breakpoint-up(xl) {
+                    padding-left: rem(20px);
+                    padding-bottom: rem(20px);
+                }
+                .shape {
+                    position: absolute;
+                    left: rem(0px);
+                    bottom: rem(0px);
+                    width: 100%;
+                    height: calc(100% - 40px);
+                    background: $secondary;
+                    @include media-breakpoint-up(md) {
+                        width: calc(100% - 15px);
+                        height: calc(100% - 15px);
+                    }
+                    @include media-breakpoint-up(xl) {
+                        width: calc(100% - 20px);
+                        height: calc(100% - 40px);
+                    }
+                }
+            }
+            &.card-plain {
+                margin-top: rem(40px);
+                @include media-breakpoint-up(md) {
+                    margin-top: rem(45px);
+                }
+                @include media-breakpoint-up(xl) {
+                    margin: rem(0px);
+                }
+                .inner {
+                    padding: rem(0px);
+                    @include media-breakpoint-up(xl) {
+                        padding: rem(55px 80px 70px 0px);
+                    }
+                }
+            }
+        }
+        &.border-tan {
+            .quote-02__card.card-shape::before {
+                background: $tan;
+            }
+        }
+        &.is-negative {
+            .card-shape {
+                margin-top: rem(-100px);
+                @include media-breakpoint-up(md) {
+                    margin-top: rem(-120px);
+                }
+                @include media-breakpoint-up(xl) {
+                    margin-top: rem(-130px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.post-card {
+    > a {
+        .post-card__thumb {
+            border-radius: rem(2px);
+            img {
+                @extend .transition-fast;
+            }
+        }
+    }
+
+    > a {
+        &:hover {
+            .post-card__thumb {
+                img {
+                    transform: scale(0.96);
+                }
+            }
+        }
+    }
+
+    &__title {
+        color: #21344b;
+        @include media-breakpoint-up(md) {
+            max-width: rem(300px);
+        }
+    }
+
+    .eyebrow-2 {
+        letter-spacing: rem(0.5px);
+    }
+}

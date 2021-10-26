@@ -1,0 +1,103 @@
+@import '../common-imports';
+
+.event-list {
+    .card-event {
+        &__title {
+            font-weight: $font-weight-normal;
+        }
+        &__content {
+            width: 75%;
+        }
+        &__meta {
+            font-weight: 500;
+            font-size: rem(14px);
+        }
+        &__date {
+            width: rem(70px);
+            height: rem(77px);
+            border: 2px solid $light-blue;
+            font-size: rem(20px);
+            line-height: rem(24px);
+            font-weight: 500;
+            @include media-breakpoint-up(md) {
+                font-size: rem(24px);
+                width: rem(78px);
+                height: rem(86px);
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                top: rem(0px);
+                right: rem(0px);
+                border-left: 12px solid transparent;
+                border-right: 0px solid transparent;
+                border-top: 12px solid $light-blue;
+            }
+        }
+        p {
+            @include media-breakpoint-up(md) {
+                max-width: 75%;
+            }
+        }
+        &:last-of-type {
+            border-bottom: 1px solid $gray-600;
+            padding-bottom: rem(25px);
+        }
+    }
+
+    &__thumb {
+        max-width: rem(103px);
+        position: absolute;
+        top: rem(-97px);
+        left: rem(-30px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(179px);
+            left: rem(-60px);
+            top: rem(-116px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(319px);
+            top: rem(-223px);
+            left: rem(0px);
+        }
+    }
+
+    .bodymoving {
+        position: absolute;
+        top: rem(-97px);
+        left: rem(-68px);
+        max-width: 100%;
+        width: rem(142px);
+        @include media-breakpoint-up(md) {
+            left: rem(-132px);
+            top: rem(-117px);
+            width: rem(252px);
+        }
+        @include media-breakpoint-up(xl) {
+            top: rem(-224px);
+            left: rem(-130px);
+            width: rem(450px);
+        }
+
+        &.line {
+            transform: rotate(270deg);
+            left: rem(-140px);
+            top: rem(-190px);
+            width: rem(260px);
+            @include media-breakpoint-up(md) {
+                left: rem(-100px);
+                top: rem(-180px);
+                width: rem(250px);
+            }
+            @include media-breakpoint-up(xl) {
+                width: rem(500px);
+                left: rem(-190px);
+            }
+        }
+
+    }
+
+    .row-events-wrapper {
+        z-index: 2;
+    }
+}

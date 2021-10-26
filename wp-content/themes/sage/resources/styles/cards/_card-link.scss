@@ -1,0 +1,41 @@
+.card-link {
+    &__social {
+        height: rem(45px);
+        width: rem(45px);
+        font-size: rem(17px);
+        box-shadow: 0 2px 20px 0 rgba(163, 163, 183, 0.26);
+        position: absolute;
+        top: rem(-25px);
+        right: rem(22px);
+        @include media-breakpoint-up(md) {
+            top: rem(-35px);
+            height: rem(65px);
+            width: rem(65px);
+            font-size: rem(22px);
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: rem(24px);
+        }
+    }
+    &__content {
+        p {
+            font-size: rem(16px);
+            line-height: rem(20px);
+            @include media-breakpoint-up(md) {
+                font-size: rem(20px);
+            }
+            @include media-breakpoint-up(xl) {
+                line-height: rem(24px);
+            }
+        }
+        .inner {
+            width: calc(100% - 50px);
+            @include media-breakpoint-up(xl) {
+                width: calc(100% - 70px);
+            }
+        }
+        .eyebrow-2 {
+            letter-spacing: rem(0.5px);
+        }
+    }
+}

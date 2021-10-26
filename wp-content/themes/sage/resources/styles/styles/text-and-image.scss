@@ -1,0 +1,40 @@
+@import '../common-imports';
+
+.text-and-image {
+    .bodymoving {
+        max-width: rem(200px);
+        position: absolute;
+        left: rem(-30px);
+        bottom: rem(-55px);
+
+        @include media-breakpoint-up(md) {
+            max-width: rem(210px);
+            bottom: rem(-110px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: rem(390px);
+            bottom: rem(-100px);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: rem(0px);
+        top: rem(0px);
+        width: 100%;
+        height: rem(72px);
+        background: $white;
+        @include media-breakpoint-up(md) {
+            height: rem(50px);
+        }
+    }
+
+    .single-card-with-bg {
+        .thumbnail-img {
+            float: none !important;
+        }
+    }
+
+}

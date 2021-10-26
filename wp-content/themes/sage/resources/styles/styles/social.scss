@@ -1,0 +1,61 @@
+@import '../common-imports';
+
+.m {
+    &-social {
+        &--social {
+            padding-top: rem(30px);
+            padding-bottom: rem(30px);
+            @include media-breakpoint-up(md) {
+                padding-top: rem(60px);
+                padding-bottom: rem(60px);
+            }
+            @include media-breakpoint-up(lg) {
+                padding-top: rem(100px);
+                padding-bottom: rem(100px);
+            }
+        }
+        &-grid {
+            display: grid;
+            grid-gap: 5px;
+            margin: 0 -30px;
+            grid-template-columns: 14px repeat(auto-fill, minmax(130px, 1fr));
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(130px, 1fr);
+            overflow-x: auto;
+            &:before,
+            &:after {
+                content: '';
+                width: 30px;
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: grid;
+                grid-gap: 16px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-auto-columns: auto;
+                grid-auto-flow: unset;
+                margin: 0;
+            }
+
+            &--ratio {
+                padding-bottom: 100%;
+                width: 100%;
+                position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+            }
+
+            &--item {
+                &:last-child {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}

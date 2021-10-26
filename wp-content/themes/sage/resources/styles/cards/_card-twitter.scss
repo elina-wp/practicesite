@@ -1,0 +1,30 @@
+.card-twitter {
+    &__top {
+        .thumbnail-img {
+            height: rem(85px);
+            width: rem(85px);
+            border-radius: 100%;
+        }
+        h4 {
+            font-size: rem(24px);
+            line-height: rem(25px);
+        }
+        p {
+            font-size: rem(20px);
+            line-height: rem(25px);
+        }
+    }
+
+    &__content {
+        p {
+            font-size: rem(22px);
+            line-height: rem(28px);
+        }
+    }
+
+    .time {
+        color: $gray-600;
+        font-size: rem(18px);
+        line-height: rem(28px);
+    }
+}

@@ -1,0 +1,54 @@
+@import '../common-imports';
+
+.three-image-grid {
+    &__thumb {
+        img {
+            z-index: 1;
+        }
+        &--half {
+            img {
+                @include media-breakpoint-up(md) {
+                    height: rem(115px);
+                    object-position: top;
+                }
+                @include media-breakpoint-up(xl) {
+                    height: rem(188px);
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: rem(10px);
+                @include media-breakpoint-up(xl) {
+                    margin-bottom: rem(15px);
+                }
+            }
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+        &--full {
+            padding-left: rem(15px);
+            padding-bottom: rem(15px);
+            img {
+                position: relative;
+                object-position: top;
+                height: rem(140px);
+                @include media-breakpoint-up(md) {
+                    height: rem(223px);
+                }
+                @include media-breakpoint-up(xl) {
+                    height: rem(375px);
+                }
+            }
+            .shape {
+                position: absolute;
+                left: rem(0px);
+                bottom: rem(0px);
+                background: $secondary;
+                width: calc(100% - 15px);
+                height: calc(100% - 15px);
+            }
+
+        }
+    }
+}

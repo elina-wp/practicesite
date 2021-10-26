@@ -1,0 +1,21 @@
+@import '../common-imports';
+@import '../cards/card-link';
+@import '../cards/card-instagram';
+@import '../cards/card-flickr';
+@import '../cards/card-twitter';
+
+.video-text-alt {
+    padding-top: rem(0px) !important;
+}
+
+.team-links-1  {
+    padding-bottom: rem(50px);
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem(100px);
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem(165px);
+    }
+
+}
+

@@ -1,0 +1,133 @@
+@import '../common-imports';
+@import '../cards/card-team';
+
+.post-filter {
+    &__controls {
+        i {
+            transform: scale(1);
+            transform-origin: 8px 13px;
+        }
+        a[aria-expanded='true'] {
+            i {
+                transform: scale(-1);
+            }
+        }
+    }
+    &__thumb {
+        position: absolute;
+        right: rem(30px);
+        bottom: rem(-65px);
+        max-width: rem(120px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(192px);
+            bottom: rem(-110px);
+            right: rem(0);
+        }
+        @include media-breakpoint-up(lg) {
+            bottom: rem(-120px);
+            max-width: rem(407px);
+            right: rem(80px);
+        }
+    }
+    .row.inner {
+        .row.masonry-grid {
+            [class*='col-'] {
+                .post-card {
+                    &__thumb {
+                        background: $secondary;
+                    }
+                }
+        
+                &:nth-of-type(2n) {
+                    .post-card {
+                        &__thumb {
+                            background: $tan;
+                        }
+                    }
+                }
+            }
+
+            .card-link > a {
+                .post-card__thumb {
+                    img {
+                        transition: all 0.3s ease;
+                    }
+                }
+                &:hover {
+                    .post-card__thumb {
+                        img {
+                            transform: scale(0.96);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .quote-1 {
+        font-size: rem(24px);
+        line-height: rem(28px);
+        @include media-breakpoint-up(xl) {
+            font-size: rem(32px);
+            line-height: rem(36px);
+        }
+    }
+
+}
+
+.filter-search {
+    position: relative;
+    .search-data__js {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        border-radius: 8px;
+        background: #fff;
+        border: 1px solid #a7a7b3;
+        max-height: rem(500px);
+        overflow-y: auto;
+        p {
+            padding: rem(10px 20px);
+            margin-bottom: rem(0px);
+            font-size: rem(18px);
+            line-height: rem(22px);
+            @include media-breakpoint-up(md) {
+                padding: rem(10px 30px);
+                font-size: rem(20px);
+                line-height: rem(24px);
+            }
+        }
+        ul {
+            li {
+                a {
+                    display: block;
+                    padding: rem(10px 20px);
+                    transition: all 0.3s ease-in-out;
+                    font-size: rem(18px);
+                    line-height: rem(22px);
+                    @include media-breakpoint-up(md) {
+                        padding: rem(10px 30px);
+                        font-size: rem(20px);
+                        line-height: rem(24px);
+                    }
+                }
+                &:hover {
+                    a {
+                        background: $off-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div#filterCollapse {
+    position: relative;
+    z-index: 22;
+}
+
+

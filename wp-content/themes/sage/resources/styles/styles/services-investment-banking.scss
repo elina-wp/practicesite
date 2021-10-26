@@ -1,0 +1,47 @@
+@import '../common-imports';
+
+.large-icon-grid {
+
+    @include media-breakpoint-up(md) {
+        margin-top: rem(-80px);
+        padding: rem(90px 0 60px);
+    }
+    @include media-breakpoint-up(xl) {
+        padding: rem(180px 0 100px);
+    }
+
+    & + .large-icon-grid {
+        padding: rem(5px 0 60px);
+        @include media-breakpoint-up(md) {
+            margin-top: rem(0px);
+            padding: rem(20px 0 55px);
+        }
+        @include media-breakpoint-up(xl) {
+            padding: rem(20px 0 85px);
+        }
+    }
+}
+
+.call-to-action-02 {
+    margin-bottom: rem(35px);
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(0px);
+    }
+}
+
+.team-links-2 {
+    h2 {
+        @include media-breakpoint-up(md) {
+            max-width: 60%;
+        }
+    }
+    padding-top: rem(70px) !important;
+    @include media-breakpoint-up(md) {
+        padding-top: rem(80px) !important;
+        padding-bottom: rem(95px) !important;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(100px) !important;
+        padding-bottom: rem(150px) !important;
+    }
+}

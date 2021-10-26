@@ -1,0 +1,20 @@
+.card-icon-box {
+    min-height: rem(254px);
+    @include media-breakpoint-up(md) {
+        min-height: rem(225px);
+        margin-bottom: rem(16px);
+    }
+    @include media-breakpoint-up(xl) {
+        min-height: rem(260px);
+    }
+
+    &__thumb {
+        max-width: rem(77px);
+        @include media-breakpoint-up(md) {
+            max-width: rem(64px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(77px);
+        }
+    }
+}

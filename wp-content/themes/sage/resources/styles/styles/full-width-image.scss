@@ -1,0 +1,72 @@
+@import '../common-imports';
+.full-with-image {
+    &__thumb {
+        height: rem(180px);
+        @include media-breakpoint-up(md) {
+            height: rem(220px);
+        }
+        @include media-breakpoint-up(lg) {
+            height: rem(310px);
+        }
+        @include media-breakpoint-up(xl) {
+            height: rem(410px);
+        }
+        img {
+            @include media-breakpoint-down(sm) {
+                object-position: right;
+            }
+        }
+    }
+}
+.fullimage-with-shape {
+    &__thumb {
+        @include media-breakpoint-down(md) {
+            margin-left: rem(-15px);
+        }
+        .shape {
+            position: absolute;
+            bottom: rem(-10px);
+            left: rem(-10px);
+            height: rem(61px);
+            background: $secondary;
+            width: rem(148px);
+            @include media-breakpoint-up(md) {
+                bottom: rem(-15px);
+                left: rem(-15px);
+                height: rem(134px);
+                width: rem(322px);
+            }
+            @include media-breakpoint-up(xl) {
+                bottom: rem(-20px);
+                left: rem(-20px);
+                height: rem(215px);
+                width: rem(518px);
+            }
+        }
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     bottom: rem(-10px);
+        //     left: rem(-10px);
+        //     height: rem(61px);
+        //     background: $secondary;
+        //     width: rem(148px);
+        //     @include media-breakpoint-up(md) {
+        //         bottom: rem(-15px);
+        //         left: rem(-15px);
+        //         height: rem(134px);
+        //         width: rem(322px);
+        //     }
+        //     @include media-breakpoint-up(xl) {
+        //         bottom: rem(-20px);
+        //         left: rem(-20px);
+        //         height: rem(215px);
+        //         width: rem(518px);
+        //     }
+        // }
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

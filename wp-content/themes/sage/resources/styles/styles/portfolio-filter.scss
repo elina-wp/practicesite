@@ -1,0 +1,42 @@
+@import '../common-imports';
+
+
+.portfolio-filter {
+
+    .custom-accordion {
+        .accordion-item {
+            padding: rem(25px 0);
+            margin-bottom: rem(0px);
+            border-top: 1px solid $gray-600;
+            &:last-child {
+                border-bottom: 1px solid $gray-600;
+            }
+        }
+        .accordion-button {
+            font-size: rem(14px);
+            color: $primary;
+            text-transform: uppercase;
+            font-weight: 500;
+            &:focus {
+                box-shadow: none;
+            }
+            span {
+                font-size: rem(14px);
+                margin-top: rem(8px);
+                color: $secondary;
+            }
+        }
+        .accordion-body {
+            .dropdown-list {
+                li {
+                    font-size: rem(18px);
+                    color: $primary;
+                    &:not(:last-child) {
+                        margin-bottom: rem(20px);
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+.masonry-grid {
+
+    .post-card,
+    .card-link {
+        img {
+            @include media-breakpoint-up(md) {
+                height: rem(280px);
+                width: 100%;
+                object-fit: cover;
+            }
+            @include media-breakpoint-up(lg) {
+                height: rem(320px);
+            }
+            @include media-breakpoint-up(xl) {
+                height: rem(430px);
+            }
+        }
+    }
+
+}

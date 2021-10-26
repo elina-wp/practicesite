@@ -1,0 +1,39 @@
+.card-icon-grid {
+    &__icon {
+        i {
+            font-size: rem(38px);
+        }
+    }
+
+    .counter {
+        font-size: rem(32px);
+        line-height: rem(23px);
+        @include media-breakpoint-up(md) {
+            font-size: rem(40px);
+            line-height: rem(28px);
+        }
+        & + h5 {
+            padding-top: rem(0px) !important;
+        }
+    }
+
+    h5 {
+        font-size: rem(22px);
+        line-height: rem(23px);
+        @include media-breakpoint-up(xl) {
+            font-size: rem(26px);
+            line-height: 1;
+        }
+    }
+
+    .eyebrow-2 {
+        font-size: rem(14px);
+        @include media-breakpoint-up(md) {
+            line-height: rem(16px);
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: rem(16px);
+        }
+    }
+    
+}

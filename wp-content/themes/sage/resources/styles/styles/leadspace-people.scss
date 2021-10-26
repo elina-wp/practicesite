@@ -1,0 +1,69 @@
+@import '../common-imports';
+
+.leadspace-people {
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(245px) !important;
+    }
+
+    h1 {
+        position: relative;
+    }
+
+    .btn-tertiary {
+        font-size: rem(16px);
+        letter-spacing: rem(0.5px);
+        color: $secondary;
+    }
+
+    .collapse-text {
+        p {
+            margin: rem(0 0 35px);
+            @include media-breakpoint-up(xl) {
+                margin: rem(0 0 45px);
+            }
+            &:last-child {
+                margin: rem(0px);
+            }
+        }
+    }
+
+    .bodymoving {
+        max-width: 100%;
+        position: absolute;
+        bottom: rem(280px);
+        right: rem(-80px);
+        width: rem(142px);
+        @include media-breakpoint-up(md) {
+            bottom: rem(-100px);
+            right: rem(-115px);
+            width: rem(253px);
+        }
+        @include media-breakpoint-up(xl) {
+            width: rem(450px);
+            bottom: rem(-150px);
+            right: rem(-210px);
+        }
+
+        &.line {
+            transform: rotate(270deg);
+            width: rem(210px);
+            right: auto;
+            left: rem(-190px);
+            top: rem(180px);
+            @include media-breakpoint-up(md) {
+                width: rem(310px);
+                left: rem(-190px);
+                top: rem(120px);
+                right: auto;
+            }
+            @include media-breakpoint-up(xl) {
+                width: rem(430px);
+                left: rem(-180px);
+                bottom: 0;
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,113 @@
+@import '../common-imports';
+@import '../cards/card-icon-grid';
+
+.section-icon-grid {
+    &--dark {
+        color: $white;
+
+        .card-icon-grid h5 {
+            font-weight: 300;
+        }
+
+    }
+    &--light {
+        color: $primary;
+    }
+    &__slider {
+        @include media-breakpoint-up(md) {
+            margin-left: rem(-40px);
+            margin-right: rem(-40px);
+        }
+        @include media-breakpoint-up(lg) {
+            margin-left: rem(-35px);
+            margin-right: rem(-35px);
+        }
+    }
+    &__slider {
+        .swiper {
+            &-wrapper {
+                @include media-breakpoint-up(md) {
+                    flex-wrap: wrap;
+                    transform: none !important;
+                }
+            }
+            &-slide {
+                @include media-breakpoint-up(md) {
+                    flex: 0 0 50%;
+                }
+                @include media-breakpoint-up(lg) {
+                    flex: 0 0 33.33%;
+                }
+            }
+            &-pagination {
+                bottom: 0;
+            }
+        }
+    }
+
+    .section-subtitle {
+        display: none;
+        font-size: rem(22px);
+        line-height: rem(23px);
+        @include media-breakpoint-up(md) {
+            font-size: rem(26px);
+            line-height: rem(28px);
+        }
+    }
+
+    .slider-note {
+        font-size: rem(16px);
+        line-height: rem(20px);
+        color: $gray-600;
+        font-style: italic;
+        @include media-breakpoint-up(md) {
+            font-size: rem(16px);
+            line-height: rem(20px);
+            margin-top: rem(115px);
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: rem(20px);
+            line-height: rem(22px);
+        }
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(0px);
+        }
+    }
+
+    &__thumb {
+        max-width: rem(146px);
+        position: absolute;
+        bottom: rem(-50px);
+        right: rem(0px);
+        z-index: 1;
+        @include media-breakpoint-up(md) {
+            max-width: rem(176px);
+            bottom: rem(-80px);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: rem(322px);
+            bottom: rem(-120px);
+        }
+    }
+
+
+    .bodymoving {
+        max-width: 100%;
+        position: absolute;
+        bottom: rem(-30px);
+        right: rem(-60px);
+        z-index: 1;
+        width: rem(200px);
+        @include media-breakpoint-up(md) {
+            bottom: rem(-70px);
+            width: rem(240px);
+        }
+        @include media-breakpoint-up(xl) {
+            width: rem(590px);
+            right: rem(-230px);
+            bottom: rem(-130px);
+        }
+    }
+
+
+}

@@ -1,0 +1,25 @@
+@import '../common-imports';
+
+.section-investment-banking {
+    &__col-article {
+        height: 100%;
+    }
+
+    &__figure > img {
+        object-fit: contain;
+        width: 158px;
+        height: 72px;
+
+        @include media-breakpoint-up(xl) {
+            width: 196px;
+            height: 90px;
+        }
+    }
+
+    &__col-article {
+        .first-link {
+            font-weight: 500;
+        }
+    }
+
+}

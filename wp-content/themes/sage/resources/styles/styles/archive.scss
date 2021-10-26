@@ -1,0 +1,59 @@
+@import '../common-imports';
+
+.m {
+    &-archive {
+
+        &-tab {
+            > .btn {
+                &:not(:first-child) {
+                    margin-left: rem(6px);
+                }
+            }
+        }
+
+        &--ratio {
+            padding-bottom: 79%;
+            width: 100%;
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        &-slider {
+            position: relative;
+            .swiper-wrapper {
+                display: flex;
+                flex-direction: column;
+                @include media-breakpoint-up(md) {
+                    flex-direction: row;
+                }
+            }
+            &__navbutton {
+                display: none;
+                position: absolute;
+                right: -56px;
+                top: 33%;
+                max-width: 40px;
+                &--nav {
+                    margin: 5px 0;
+                    cursor: pointer;
+                    &.swiper-button-disabled {
+                        opacity: 0.4;
+                        display: block;
+                    }
+                }
+            }
+
+            .m-acrhive-item {
+                @include media-breakpoint-down(md) {
+                    padding: rem(0 30px);
+                }
+            }
+        }
+    }
+}

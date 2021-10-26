@@ -1,0 +1,23 @@
+.link {
+    &-text {
+        text-decoration: underline;
+        font-weight: 500;
+        @extend .transition-fast;
+
+        &--large {
+            font-size: rem(50px);
+            line-height: rem(50px);
+            &:hover {
+                color: $secondary !important;
+            }
+        }
+
+        &--small {
+            font-size: rem(20px);
+            line-height: 0.9;
+            &:hover {
+                color: $primary !important;
+            }
+        }
+    }
+}
