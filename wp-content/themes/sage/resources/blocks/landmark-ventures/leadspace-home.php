@@ -10,6 +10,7 @@
                         @@para
                     </p>
                     <a href="#" class="btn btn-primary mt-3"><?php echo  $title; ?></a>
+                    <p>this is test</p>
                 </article>
             </div>
             <div class="col-md-5 col-xl-5">`
