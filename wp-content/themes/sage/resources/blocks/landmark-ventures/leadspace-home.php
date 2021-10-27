@@ -11,6 +11,7 @@
                     </p>
                     <a href="#" class="btn btn-primary mt-3"><?php echo  $title; ?></a>
                     <p>this is test</p>
+                    <h2>this is heading</h2>
                 </article>
             </div>
             <div class="col-md-5 col-xl-5">`
