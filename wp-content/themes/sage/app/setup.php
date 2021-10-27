@@ -235,7 +235,8 @@ if( function_exists('acf_register_block_type') ) {
 
     function landmarkVenturesACfBlockModules() {
         $landmarkVenturesModules = [
-            'leadspace_home' => 'Leadspace Home'
+            'leadspace_home' => 'Leadspace Home',
+            'news_listing'  => 'News Listing'
         ];
         return $landmarkVenturesModules;
     }
@@ -276,6 +277,14 @@ if( function_exists('acf_register_block_type') ) {
                         if ( file_exists( $jsFilePath ) ) {
                             wp_enqueue_script( $fileName.'js', asset('scripts/'.$fileName.'.js')->uri(), array('jquery'), '', true );
                         }
+
+                        if ( 'news-listing' == $fileName ) {
+                            wp_localize_script( $fileName.'js', 'landmark_object', array(
+                                    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+                                )
+                            );
+                        }
+
                     },
                 ));
             }

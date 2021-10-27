@@ -5,9 +5,9 @@
         <div class="row align-items-start align-items-lg-center">
             <div class="col-md-7 offset-xl-1 col-xl-6">
                 <article class="card-leadspace">
-                    <h1 class="card-leadspace__title mb-6">@@mainText <span class="leadspace-home__spanner">@@borderText</span>. </h1>
+                    <h1 class="card-leadspace__title mb-6">Test  </h1>
                     <p class="mb-0">
-                        @@para
+                       This is paragraph
                     </p>
                     <a href="#" class="btn btn-primary mt-3"><?php echo  $title; ?></a>
                     <p>this is test</p>
