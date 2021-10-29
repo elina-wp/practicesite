@@ -13,6 +13,7 @@ if( class_exists('ACF') ) :
             'core/shortcode',
             'acf/leadspace-home',
             'acf/news-listing',
+            'acf/post-filter'
             
         );
 

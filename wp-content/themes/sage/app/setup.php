@@ -236,7 +236,8 @@ if( function_exists('acf_register_block_type') ) {
     function landmarkVenturesACfBlockModules() {
         $landmarkVenturesModules = [
             'leadspace_home' => 'Leadspace Home',
-            'news_listing'  => 'News Listing'
+            'news_listing'  => 'News Listing',
+            'post_filter' => 'Our Team Filter',
         ];
         return $landmarkVenturesModules;
     }
