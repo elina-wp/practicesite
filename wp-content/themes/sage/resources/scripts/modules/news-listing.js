@@ -15,7 +15,7 @@ class newsList {
                 type: 'POST',
                 dataType: "html",
                 data: {
-                    'action': 'blog_post',
+                    'action': 'blogPostLoadMore',
                     'pageNumber': pageNumber,
                     'ppp': ppp,
                 },

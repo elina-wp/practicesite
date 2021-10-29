@@ -1,9 +1,9 @@
 <?php 
 // Action
-add_action('wp_ajax_blog_post', 'blog_post');
-add_action('wp_ajax_nopriv_blog_post', 'blog_post');
+add_action('wp_ajax_blogPostLoadMore', 'blogPost_function');
+add_action('wp_ajax_nopriv_blogPostLoadMore', 'blogPost_function');
 
-function blog_post()
+function blogPost_function()
 {    
     $posts_per_page = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
     $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;

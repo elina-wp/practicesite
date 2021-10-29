@@ -279,7 +279,7 @@ if( function_exists('acf_register_block_type') ) {
                             wp_enqueue_script( $fileName.'js', asset('scripts/'.$fileName.'.js')->uri(), array('jquery'), '', true );
                         }
 
-                        if ( 'news-listing' == $fileName ) {
+                        if ( 'news-listing' == $fileName || 'post-filter' == $fileName ) {
                             wp_localize_script( $fileName.'js', 'landmark_object', array(
                                     'ajaxurl' => admin_url( 'admin-ajax.php' ),
                                 )
