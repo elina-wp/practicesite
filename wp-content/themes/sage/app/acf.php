@@ -12,6 +12,8 @@ if( class_exists('ACF') ) :
             'core/quote',
             'core/shortcode',
             'acf/leadspace-home',
+            'acf/news-listing',
+            'acf/post-filter'
             
         );
 
